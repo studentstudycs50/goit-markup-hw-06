@@ -383,7 +383,7 @@ margin-right: 50px;
 }
 .modal-form-icon {
   position: absolute;
-  top: 16px;
+  top: 20px;
   left: 12px;
   transform: translateY(100%);
   /*fill: var(--title-text-color);*/
