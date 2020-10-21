@@ -377,17 +377,15 @@ margin-right: 50px;
 .modal-form-input-label:hover .modal-form-icon {
   fill: var(--accent-text-color);
 }
+.modal-form-input-label:focus .modal-form-icon {
+  fill: var(--accent-text-color);
+}
 .modal-form-icon {
-  fill: var(--title-text-color);
   position: absolute;
   top: 16px;
   left: 12px;
   transform: translateY(100%);
-}
-.modal-form-icon:hover svg,
-.modal-form-icon:focus svg {
-  fill: (var(--accent-text-color));
-  outline: none;
+  /*fill: var(--title-text-color);*/
 }
 
 .modal-form-input {
@@ -421,9 +419,7 @@ margin-right: 50px;
   border-radius: 4px;
   padding: 12px 16px;
 }
-.modal-form-check:checked + .modal-form-label-check svg {
-  background-color: ;
-}
+
 .modal-form-check:before {
   display: block;
   content: "";
@@ -431,7 +427,20 @@ margin-right: 50px;
   height: 15px;
   border: 1px solid var(--accent-text-color);
 }
-
+.modal-form-label-check::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 1px solid #000;
+}
+.modal-form-check:checked + .modal-form-label-check::before {
+  background-image: url("../img/svg/icon-check.png");
+}
+.visually-hidden {
+  visibility: hidden;
+  position: absolute;
+}
 .modal-form-label-check {
   font-size: 14px;
   font-weight: 400;
@@ -877,6 +886,7 @@ margin-right: 50px;
 
   padding-left: 16px;
   margin-right: 12px;
+  color: var(--hero-text-color);
 }
 .button-form-foot {
   background-color: var(--accent-text-color);
