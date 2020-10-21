@@ -79,17 +79,19 @@
                         <div class="modal-form-field">
 
                            <label for="name" class="modal-form-input-label" placeholder="">
-                               <svg class="modal-form-icon" width="12" height="12" class="modal-icon">
+                            <input type="text" class="modal-form-input" name="name" id="name" />
+                            <svg class="modal-form-icon" width="12" height="12" class="modal-icon">
                                    <use href="./img/svg/sprite.svg#man"></use>
-                               </svg>Имя<input type="text" class="modal-form-input" name="name" id="name" /></label>
+                               </svg>Имя</label>
                         </div>
                           
                         <div class="modal-form-field">
 
                         <label for="tel" class="modal-form-input-label" placeholder="">
+                            <input type="tel" class="modal-form-input" name="tel" id="tel" />
                             <svg class="modal-form-icon" width="13" height="13" class="modal-icon">
                                 <use href="./img/svg/sprite.svg#telef"></use>
-                            </svg>Телефон<input type="tel" class="modal-form-input" name="tel" id="tel" /></label>
+                            </svg>Телефон</label>
                           
                         </div>
                             
@@ -97,18 +99,22 @@
                         <div class="modal-form-field">
 
                             <label for="mail" class="modal-form-input-label" placeholder="">
+                                <input type="email" class="modal-form-input" name="mail" id="mail" />
                                 <svg class="modal-form-icon" width="15" height="12" class="modal-icon">
                                     <use href="./img/svg/sprite.svg#letter"></use>
-                                </svg>Почта<input type="email" class="modal-form-input" name="mail" id="mail" /></label>
+                                </svg>Почта</label>
                             
                         </div>
-                            
+                            <div class="modal-form-field">
                             <label for="user-message" class="modal-form-input-label">Комментарий</label>
                             <textarea name="" name="user-message" id="user-message" class="modal-form-message" placeholder="Введите текст"></textarea>
+                        </div>
+
                             <div class="modal-check-flex">
+
                             <input type="checkbox" name="user-policy" id="user-policy" class="modal-form-check visually-hidden" />
                         <label for="user-policy" class="modal-form-label-check">
-                            <span> Соглашаюсь с рассылкой и принимаю
+                            <span class="modal-agree"> Соглашаюсь с рассылкой и принимаю
                             <a href="#">Условия договора</a></span></label>
                     </div>
                            
