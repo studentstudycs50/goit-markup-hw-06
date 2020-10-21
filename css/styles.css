@@ -870,6 +870,9 @@ font-weight: 600;
   margin-bottom: 20px;
   padding-top: 12px;
 }
+.email-form-foot {
+  display: flex;
+}
 
 .contact-form-email {
   width: 358px;
@@ -901,8 +904,10 @@ font-weight: 600;
   color: var(--hero-text-color);
 
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.42;
   text-decoration: none;
+  align-items: center;
+  display: flex;
 }
 
 .icon-for-form-foot {
@@ -911,6 +916,7 @@ font-weight: 600;
   width: 24px;
   height: 24px;
   margin-left: 10px;
+  fill: var(--hero-text-color);
 }
 .join-us-footer-email {
   display: flex;
