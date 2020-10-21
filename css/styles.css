@@ -308,8 +308,7 @@ margin-right: 50px;
   background-color: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(197, 121, 121, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  padding: 0 40px;
-  padding-top: 40px;
+  padding: 40px;
 }
 .modal .close-modal {
   position: absolute;
@@ -341,18 +340,14 @@ margin-right: 50px;
   pointer-events: none;
 }
 /* Modal FORM*/
-.contact-form {
+
+.modal-form {
   display: flex;
   flex-direction: column;
-  width: 528px;
-  height: 581px;
-  margin: 0 auto;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(197, 121, 121, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  padding-top: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
+  top: -20px;
+  left: 0;
 }
+
 .cap-for-form-head {
   font-weight: 700;
   font-size: 20px;
@@ -364,23 +359,87 @@ margin-right: 50px;
   width: 100%;
   margin-bottom: 30px;
 }
+
+.modal-form-field {
+  position: relative;
+  margin-bottom: 10px;
+}
+.modal-form-input-label {
+  position: relative;
+
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.418;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+  display: block;
+}
+.modal-form-input-label:hover .modal-form-icon {
+  fill: var(--accent-text-color);
+}
 .modal-form-icon {
   fill: var(--title-text-color);
   position: absolute;
-  top: 100%;
+  top: 16px;
   left: 12px;
   transform: translateY(100%);
 }
-.contact-form-input:hover .form-for-head {
-  fill: var(--accent-text-color);
-}
-.form-border {
-  width: 448px;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  margin-bottom: 10px;
+.modal-form-icon:hover svg,
+.modal-form-icon:focus svg {
+  fill: (var(--accent-text-color));
+  outline: none;
 }
 
+.modal-form-input {
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  top: 0;
+  left: 0;
+}
+
+.modal-form-input:hover,
+.modal-form-input:focus {
+  border-color: var(--accent-text-color);
+  outline: none;
+}
+
+.modal-form-input:focus ~ .modal-form-icon svg {
+  fill: var(--accent-text-color);
+}
+.modal-form-message:focus {
+  outline: none;
+}
+
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+.modal-form-check:checked + .modal-form-label-check svg {
+  background-color: ;
+}
+.modal-form-check:before {
+  display: block;
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--accent-text-color);
+}
+
+.modal-form-label-check {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.714;
+}
+.modal-check-flex {
+  display: flex;
+}
 .button-modal-form {
   color: var(--hero-text-color);
   font-weight: 700;
@@ -399,85 +458,18 @@ margin-right: 50px;
   margin-top: 30px;
   display: block;
   margin: auto;
-}
-.modal-form {
-  display: flex;
-  flex-direction: column;
-  top: -20px;
-  left: 0;
+  margin-top: 30px;
 }
 
-.modal-form-input:focus,
-.modal-form-message:focus {
-  outline: none;
-}
-.modal-form-field {
-  position: relative;
-  margin-bottom: 28px;
-}
-.modal-form-input {
-  width: 448px;
-  height: 40px;
-  padding-left: 42px;
-  border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  top: 0;
-  left: 0;
-}
-.modal-form-input:focus {
-  border-color: var(--accent-text-color);
-}
-.modal-form-input:focus ~ .modal-form-icon {
-  fill: var(--accent-text-color);
-}
-.modal-form-message {
-  width: 100%;
-  height: 120px;
-  resize: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding: 12px 16px;
-}
-.modal-form-input-label {
-  position: relative;
-  top: -20;
-  left: 0;
-  font-family: inherit;
-  font-size: 12px;
-  line-height: 1.418;
-  letter-spacing: 0.1em;
-  margin-bottom: 4px;
-}
-
-.modal-form-check:checked + .modal-form-label-check svg {
-  background-color: ;
-}
-.modal-form-check:before {
-  display: block;
-  content: "";
-  width: 16px;
-  height: 15px;
-  border: 1px solid var(--accent-text-color);
-}
 .modal-form-icon-gal:focus {
   fill: var(--hero-text-color);
   background-color: (var(--accent-text-color));
 }
-/*
-
-font-weight: 600;
-  font-size: 11px;
-  line-height: 15px;
-  letter-spacing: 0.1em;
-  color: #fff;
-  background-color: transparent;
-
-.lable-form {
-  margin-bottom: 5px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.171;
-  background-color: transparent;
+/*.form-border {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  margin-bottom: 10px;
 }*/
 /* ====================END HEADER===================*/
 
